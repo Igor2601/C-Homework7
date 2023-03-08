@@ -9,7 +9,7 @@
 using System;
 using static System.Console;
 Clear();
-int [,] array = GetArray(3, 4, 1, 9);
+int[,] array = GetArray(3, 4, 1, 9);
 PrintArray(array);
 WriteLine();
 Write("i = ");
@@ -43,15 +43,15 @@ bool Position(int[,] array)
 {
     if (i < array.GetLength(0) && j < array.GetLength(1))
     {
-    Write($" -> {array[i, j]} ");
-    return false;
+        Write($" -> {array[i, j]} ");
+        return false;
     }
     else
     {
-    Write($" -> такого числа в массиве нет");
-    return false; 
-    } 
-    return true; 
+        Write($" -> такого числа в массиве нет");
+        return false;
+    }
+    return true;
 }
-if (Position(array))   
-Write($" -> {array[i, j]}");
+if (Position(array))
+    Write(array[i, j]);
